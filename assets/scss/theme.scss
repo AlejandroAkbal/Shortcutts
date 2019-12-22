@@ -3,25 +3,26 @@
 **/
 
 @mixin dark {
+  // Main color is 41b883 and 35495e (Vue's theme colors)
   --color-primary: #41b883;
   --color-primary-variant: #67c69c;
-  --color-on-primary: #d9f1e6;
+  --color-on-primary: #349369;
 
-  --color-secondary: #35495e;
-  --color-secondary-variant: #5d6d7e;
-  --color-on-secondary: #d9f1e6;
+  --color-secondary: #35495e; // TODO
+  --color-secondary-variant: #5d6d7e; // TODO
+  --color-on-secondary: #d9f1e6; // TODO
 
-  --color-background: #1b252f;
-  --color-on-background: #d7dbdf;
+  --color-background: #0b0f13;
+  --color-on-background: #10161c;
 
-  --color-foreground: #9aa4af;
-  --color-on-foreground: #d7dbdf;
+  --color-surface: #10161c;
+  --color-on-surface: #151d26;
 
-  --color-error: red;
-  --color-on-error: #d9f1e6;
+  --color-error: red; // TODO
+  --color-on-error: #d9f1e6; // TODO
 
-  --color-success: green;
-  --color-on-success: #d9f1e6;
+  --color-success: green; // TODO
+  --color-on-success: #d9f1e6; // TODO
 }
 
 @mixin light {
