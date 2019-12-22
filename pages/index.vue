@@ -1,9 +1,15 @@
 <template>
-  <div class=""></div>
+  <div>
+    <Title />
+  </div>
 </template>
 
 <script>
-export default {}
+import Title from '~/components/content/Title'
+
+export default {
+  components: { Title }
+}
 </script>
 
 <style></style>

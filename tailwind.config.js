@@ -15,8 +15,8 @@ module.exports = {
     extend: {
       colors: {
         // Used by me
-        default: 'var(--color-default)',
-        'default-variant': 'var(--color-default-variant)',
+        // default: 'var(--color-default)',
+        // 'default-variant': 'var(--color-default-variant)',
 
         /* Used by common themes
          *

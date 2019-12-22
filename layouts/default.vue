@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="dark">
     <!-- Navigation bar -->
 
     <!-- Content -->
-    <nuxt />
+    <main><nuxt /></main>
   </div>
 </template>
 
