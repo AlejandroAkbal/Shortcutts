@@ -1,8 +1,12 @@
 <template>
   <div
-    class="bg-surface border border-on-surface h-fit-content w-fit-content p-3"
+    class="bg-surface border border-border hover:border-border-variant w-fit-content p-3 my-2 overflow-hidden whitespace-no-wrap"
   >
-    <div v-text="keys.join(' + ')" class="text-center text-primary"></div>
+    <span v-text="text" class="text-secondary mr-2" />
+    <code
+      v-text="keys.join(' + ')"
+      class="text-center text-primary-variant px-2 py-1 border border-primary overflow-hidden"
+    />
   </div>
 </template>
 
@@ -11,12 +15,17 @@ export default {
   name: 'ShortcutKey',
 
   props: {
+    text: {
+      default: undefined,
+      type: String,
+      required: false
+    },
     keys: {
       default: () => {
-        return ['Ctrl', 'Alt', 'R']
+        return []
       },
       type: Array,
-      required: false
+      required: true
     }
   }
 }

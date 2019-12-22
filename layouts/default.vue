@@ -1,9 +1,11 @@
 <template>
-  <div class="dark">
+  <div>
     <!-- Navigation bar -->
 
     <!-- Content -->
-    <main><nuxt /></main>
+    <main class="w-full md:w-4/5 mx-auto">
+      <nuxt />
+    </main>
   </div>
 </template>
 
