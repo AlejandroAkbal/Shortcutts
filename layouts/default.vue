@@ -8,7 +8,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'DefaultLayout',
+
+  // Set background color to theme's color
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'bg-background'
+      }
+    }
+  }
+}
 </script>
 
 <style></style>

@@ -1,6 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 /* Load own styles and override tailwind's defaults */
 @import '~/assets/scss/theme.scss';
+
+@import 'tailwindcss/utilities';

@@ -38,6 +38,13 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
   /*
+   ** TailwindCSS settings
+   */
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
+    cssPath: '~/assets/app.scss'
+  },
+  /*
    ** Nuxt.js modules
    */
   modules: ['@nuxtjs/pwa', 'nuxt-purgecss', '@nuxtjs/sitemap'],
