@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- Navigation bar -->
+
+    <!-- Content -->
     <nuxt />
   </div>
 </template>
