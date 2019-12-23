@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+}
+
+.custom-grid {
+  // Rows / Columns
+  grid-template: repeat(auto-fit, 1fr) / repeat(1, max-content);
+  gap: 0px;
+
+  @apply justify-between content-around;
+}
+
+@screen md {
+  .custom-grid {
+    grid-template-columns: repeat(3, max-content);
+  }
+}

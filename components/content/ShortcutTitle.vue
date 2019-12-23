@@ -1,6 +1,7 @@
 <template>
   <div
-    class="bg-surface border border-primary w-2/3 p-2 overflow-hidden select-none"
+    :class="{ 'rounded-lg': roundedBorder }"
+    class="w-full bg-surface border border-primary p-2 overflow-hidden select-none"
   >
     <h1
       v-text="text"
@@ -14,6 +15,7 @@ export default {
   name: 'ShortcutTitle',
 
   props: {
+    roundedBorder: { default: false, type: Boolean, required: false },
     text: {
       default: undefined,
       type: String,

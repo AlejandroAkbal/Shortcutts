@@ -1,33 +1,55 @@
 <template>
   <div>
     <!-- Title -->
-    <Title class="fixed top-0 left-0 right-0 mx-auto mt-5 z-0" />
+    <Title id="title" class="fixed top-0 inset-x-0 mx-auto mt-5 z-0" />
 
     <!-- Content -->
     <div
-      class="bg-background relative z-10 mt-3/4 md:mt-2/12 border rounded-lg border-border"
-      style="height: 200vh;"
+      id="content"
+      class="bg-background border rounded-lg border-border relative z-10 "
     >
+      <div class="p-5">
+        <ShortcutTitle :rounded-border="true" text="Google Docs" />
+      </div>
       <!-- Grid -->
-      <div class="grid  md:grid-automin-2 px-5">
-        <!-- border-l border-on-primary border-dashed ml-3 pl-3 -->
-        <div class="mt-5">
-          <ShortcutTitle text="General" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'R']" text="Bold text" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'I']" text="Italic text" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'U']" text="Underline text" />
+      <div class="grid custom-grid p-5">
+        <!-- Common Actions -->
+        <div>
+          <ShortcutTitle text="Common actions" />
+          <ShortcutKey :keys="['Ctrl', 'C']" text="Copy" />
+          <ShortcutKey :keys="['Ctrl', 'X']" text="Cut" />
+          <ShortcutKey :keys="['Ctrl', 'V']" text="Paste" />
+          <ShortcutKey
+            :keys="['Ctrl', 'Shift', 'V']"
+            text="Paste without formatting"
+          />
+          <ShortcutKey :keys="['Ctrl', 'Z']" text="Undo" />
+          <ShortcutKey :keys="['Ctrl', 'Shift', 'Z']" text="Redo" />
         </div>
-        <div class="mt-5">
-          <ShortcutTitle text="Files" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'R']" text="Bold text" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'I']" text="Italic text" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'U']" text="Underline text" />
+
+        <!-- Text formatting -->
+        <div>
+          <ShortcutTitle text="Text formatting" />
+          <ShortcutKey :keys="['Ctrl', 'B']" text="Bold" />
+          <ShortcutKey :keys="['Ctrl', 'I']" text="Italicize" />
+          <ShortcutKey :keys="['Ctrl', 'U']" text="Underline" />
         </div>
-        <div class="mt-5">
-          <ShortcutTitle text="Miscellaneous" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'R']" text="Bold text" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'I']" text="Italic text" />
-          <ShortcutKey :keys="['Ctrl', 'Alt', 'U']" text="Underline text" />
+
+        <!-- Paragraph formatting -->
+        <div>
+          <ShortcutTitle text="Paragraph formatting" />
+          <ShortcutKey
+            :keys="['Ctrl', ']']"
+            text="Increase paragraph indentation"
+          />
+          <ShortcutKey
+            :keys="['Ctrl', '[']"
+            text="Decrease paragraph indentation"
+          />
+          <ShortcutKey
+            :keys="['Ctrl', 'Alt', '0']"
+            text="Apply normal text style"
+          />
         </div>
       </div>
     </div>
@@ -40,7 +62,13 @@ import ShortcutKey from '~/components/content/ShortcutKey'
 import ShortcutTitle from '~/components/content/ShortcutTitle'
 
 export default {
-  components: { Title, ShortcutKey, ShortcutTitle }
+  components: { Title, ShortcutKey, ShortcutTitle },
+
+  mounted() {
+    // Wacky way of having a margin top so content can scroll over the title
+    document.getElementById('content').style.marginTop =
+      document.getElementById('title').offsetHeight * 1.5 + 'px'
+  }
 }
 </script>
 

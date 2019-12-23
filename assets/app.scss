@@ -3,5 +3,6 @@
 
 /* Load own styles and override tailwind's defaults */
 @import '~/assets/scss/theme.scss';
+@import '~/assets/scss/general.scss';
 
 @import 'tailwindcss/utilities';

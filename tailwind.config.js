@@ -84,27 +84,5 @@ module.exports = {
   // variants: ['responsive', 'group-hover', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled'],
   variants: {
     // textColor: ['responsive', 'group-hover', 'hover', 'focus']
-  },
-
-  plugins: [
-    // ...
-    require('tailwindcss-grid')({
-      grids: [2, 3, 5, 6, 8, 10, 12],
-      gaps: {
-        0: '0',
-        4: '1rem',
-        8: '2rem',
-        '4-x': '1rem',
-        '4-y': '1rem'
-      },
-      autoMinWidths: {
-        '2': '0.5rem',
-        '4': '1rem',
-        '8': '2rem',
-        '16': '4rem',
-        '24': '6rem'
-      },
-      variants: ['responsive']
-    })
-  ]
+  }
 }
